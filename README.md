@@ -16,9 +16,9 @@
 * Os tipos de transação (depósito e saque) foram definidas no TransactionsController. Caso o número de tipos fosse maior, eu optaria por refatorar essa parte de forma mais modular, mas com apenas duas operações seria "overengineering" demais.
 * As transações são computadas no controller usando a facade `DB::transaction()` para evitar inconsistências.
 * Cada transação realizada é persistida numa tabela dedicada de transações, possibilitando que sejam desfeitas (mediante a implementação de uma funcionalidade futura).
-* Utilizou-se o mecanismo autenticação padrão com 'auth' middleware e sessão com web driver.
+* Utilizou-se o mecanismo de autenticação padrão com 'auth' middleware e sessão com web driver.
 * Foi incluso também o pacote/middleware/migrations do [Laravel Sanctum](https://laravel.com/docs/7.x/sanctum), caso haja intenção de utilizar autenticação token-based.
-* Ao registrar um novo usuário no frontend, uma nova conta é criada automaticamente com saldo 0. Contas criadas utilizando Model Factories (via Artisan Tinker, por exemplo) não incluem o mesmo mecanismo, deixando a cargo do desenvolvedor para maior flexibilidade.
+* Ao registrar um novo usuário no frontend, uma nova conta é criada automaticamente com saldo 0. Usuários criados utilizando Model Factories (via Artisan Tinker, por exemplo) não incluem o mesmo mecanismo, deixando a cargo do desenvolvedor para maior flexibilidade.
 
 ### Frontend
 

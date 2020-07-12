@@ -1,4 +1,5 @@
 # Desafio Capgemini
+![build](https://github.com/flayshon/capgemini-api/workflows/.github/workflows/laravel.yml/badge.svg)
 
 ## Ferramentas auxiliares
 * O pacote [laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper) foi usado como dev-dependecy para facilitar o desenvolvimento no vscode.
